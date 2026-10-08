@@ -1,24 +1,21 @@
-# Öffentliche V1-Quellbasis für DRA V2
+# Öffentlicher Ursprung des vorbereiteten V2-Veröffentlichungskanals
 
-Stand: 08.10.2026.
+Stand: 08.10.2026. **Noch keine V2-Version veröffentlicht.**
 
-| Merkmal | Wert |
+| Ebene | Quellstand |
 | --- | --- |
-| Öffentliche Quelle | TheDaimos/deploy-relay-agent-pub |
-| Quellcommit | 0c9d7f49f080dfe77b6c3910f89d6a61ae4b8cfa |
-| Importcommit in V2 | c67bed1d9a4eb669796b6831c65534d956826794 |
-| Dateien | 43, einschließlich vollständiger Home-Assistant-Integration und öffentlicher Lizenz-/Sicherheitsunterlagen |
-| Prüfung | Für jede Datei wurde das Git-Blob im Ziel gegen den veröffentlichten Quellprüfwert verifiziert |
-| Ursprüngliche Version | 1.0.0; noch keine V2-Änderung |
-| Private Git-Historie | Nicht übernommen |
-| Private Diagnoseexporte und lokale Daten | Nicht übernommen |
-| Öffentliche V1-Auslieferung | Bleibt getrennt unter TheDaimos/deploy-relay-agent-pub |
+| Bereits öffentlich veröffentlichte V1.0.0-Basis | `TheDaimos/deploy-relay-agent-pub@0c9d7f49f080dfe77b6c3910f89d6a61ae4b8cfa` |
+| Nachweisbarer Import in dieses Repository | `c67bed1d9a4eb669796b6831c65534d956826794` |
+| Verifizierte Basispaketdateien | 43 byte-/Git-Blob-identische V1-Dateien, einschließlich vollständiger Integration und öffentlicher Lizenz-/Sicherheitsunterlagen |
+| Offizielle Bilddateien | `brand/icon.png` und `brand/icon@2x.png` unverändert |
+| Private Git-Historie, private Diagnosen und Zugangsdaten | **Nicht übernommen** |
+| Laufende V2-Entwicklung | `TheDaimos/deploy-relay-agent-v2-dev` – separates öffentliches Repository |
+| Veröffentlichungsstatus | `NOT RELEASED`, aktuelle Laufzeitbasis weiter `1.0.0` |
 
-Offizielle lokale Markenbilder stammen unverändert aus dem öffentlichen V1-Paket:
+Der initiale öffentliche Stagingstand wurde für `v2-dev` in einer weiteren, eigenständigen Git-Historie übernommen. Dieses Repository wird ab jetzt für kontrollierte, **explizit abgenommene** V2-Veröffentlichungen reserviert und nicht als täglicher Entwicklungszweig betrieben.
 
-- custom_components/deploy_relay/brand/icon.png: Blob eca8b2a1261b4f60f26d9ba6d31c96c6e3c9f437 (256 × 256).
-- custom_components/deploy_relay/brand/icon@2x.png: Blob f1b2ae67b73d7bd408779e4e553f5c4452dc47b9 (512 × 512).
+Die privaten V1-Quellen, alten Git-Commits, Tests mit realen Daten, Home-Assistant-Sicherungen und Diagnoseexporte wurden nicht importiert.
 
-Alle neuen Entwicklungsdokumente, Tests und GitHub-Actions-Dateien dieses Repositories entstehen in einer eigenen öffentlichen Historie. Alte private Dokumente, Sicherungen und Git-Verläufe werden nicht übernommen.
+## Prüfpflicht für spätere Veröffentlichungen
 
-Vor der ersten V2-Installation sind Versions-/Kanalverträge, Sicherheit und HA-Kompatibilität gesondert zu prüfen. Eine bytegleiche V1-Ausgangsbasis ist allein keine V2-Freigabe.
+Jede Übernahme aus `v2-dev` verlangt einen eindeutigen DEV-Quellcommit, ein belegtes unverändertes Stagingpaket, HACS-/Hassfest-Prüfungen, gesicherte V1→V2-Migration, reale HA-Abnahme und bewusste Freigabe. Keine Aktualisierung über einen beweglichen DEV-Zweig direkt in den Veröffentlichungskanal.

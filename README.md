@@ -1,43 +1,27 @@
-# Deploy Relay Agent V2 — Öffentliche Entwicklung
+# Deploy Relay Agent V2 — öffentlicher Veröffentlichungskanal
 
-**Status: Entwicklungsvorbereitung. Noch keine V2-Freigabe, kein veröffentlichter V2-Installationsstand.**
+**Status: V2 noch nicht veröffentlicht. Dieses Repository ist derzeit nur vorbereitet, nicht als V2-HACS-Quelle freigegeben.**
 
-Dieses Repository ist die **öffentliche Entwicklungsquelle** für die nächste Ausführungsarchitektur von Deploy Relay Agent (DRA), einer Home-Assistant-Integration zur kontrollierten Bereitstellung ausgewählter Git-Stände.
+Dieses Repository ist der künftig **stabile öffentliche Auslieferungskanal** für Deploy Relay Agent V2 (Home Assistant).
 
-## Ausgangsbasis
+## Saubere Trennung
 
-Der Quellcode unter `custom_components/deploy_relay/` wird aus dem **bereits öffentlichen** [DRA-V1-HACS-Repository](https://github.com/TheDaimos/deploy-relay-agent-pub) übernommen und zunächst **bytegleich** als nachvollziehbare Ausgangsbasis eingefroren.
+- **[deploy-relay-agent-v2-dev](https://github.com/TheDaimos/deploy-relay-agent-v2-dev):** Laufende Entwicklung, Fehlerkorrekturen, automatische Prüfungen, Teststände, verbindliche Architektur- und Abnahmearbeit.
+- **[deploy-relay-agent-v2-pub](https://github.com/TheDaimos/deploy-relay-agent-v2-pub):** Nur nach ausdrücklicher Freigabe übernommene V2-Stände, späterer HACS-Veröffentlichungskanal.
+- **[deploy-relay-agent-pub](https://github.com/TheDaimos/deploy-relay-agent-pub):** Bestehende V1-HACS-Auslieferung; bleibt während der V2-Entwicklung unverändert.
 
-- Quelle: `TheDaimos/deploy-relay-agent-pub`, Commit `0c9d7f49f080dfe77b6c3910f89d6a61ae4b8cfa`.
-- Ausgangsversion: **1.0.0**, nicht als V2-Version umdeuten.
-- Neues Repository, **neue Git-Historie**: keine Übernahme der privaten DEV-Geschichte, privaten Diagnosen, lokalen Sicherungen oder Zugangsdaten.
-- Die öffentliche [V1-HACS-Auslieferung](https://github.com/TheDaimos/deploy-relay-agent-pub) bleibt davon unabhängig.
+## Aktueller Inhalt
 
-**Bitte dieses Repository noch nicht über HACS oder DRA zur Aktualisierung einer produktiv genutzten Installation verwenden.** Die V2-Entwicklung beginnt erst nach der getrennten V1-Finalisierung und den vorgeschriebenen Abnahmen.
+Der Integrationsordner ist eine **bereits öffentlich veröffentlichte V1.0.0-Quellbasis** mit den offiziellen DRA-Markengrafiken. Die vorbereitenden V2-Dateien begründen **keine V2-Version**. Eine HACS-V2-Freigabe ist noch nicht erfolgt. **Bitte dieses Repository gegenwärtig nicht als V2-Installationsquelle verwenden.**
 
-## Geplanter V2-Umbau
+Die bisherige private Git-Historie, private Entwicklungsdiagnosen und lokale Home-Assistant-Daten sind nicht in dieses Repository eingeflossen. Siehe [öffentliche Ausgangsbasis](docs/SOURCE_PROVENANCE.md).
 
-- Aufträge dauerhaft serverseitig führen, statt vom geöffneten Browser abhängig zu sein.
-- Auftrag, Fortschritt, Sperr-/Wartezustand und Ergebnis nachvollziehbar speichern.
-- Verbindungsausfall und erneute Verbindung ohne Verlust des Auftragsstatus ermöglichen.
-- Sammelprüfungen und Sammelinstallation auf dem Home-Assistant-Server steuern.
-- Große Dateilisten bedarfsgerecht übertragen; Mobilgeräte entlasten.
-- Vorhandene Schreibsperren, Backup-vor-Mutation, Prüfung, Rückfall und Wiederherstellungszustände **nicht abschwächen**.
-- Diagnose und Protokolle mit gemeinsamen, bereinigten Ereignisdaten ausstatten.
-- Home-Assistant-Integrationsansicht, offizielle DRA-Logos und Zugang ohne sichtbaren Seitenleisteneintrag verbessern.
+## Zukünftige Veröffentlichungen
 
-Der grobe öffentliche Entwicklungsplan steht in [docs/V2_ROADMAP.md](docs/V2_ROADMAP.md); verbindliche Prüf- und Freigabeschritte werden vor Implementierungsbeginn dokumentiert.
+Eine Version gelangt ausschließlich nach bestandenen Tests, vollständig dokumentierter Home-Assistant-Realabnahme, Sicherheits-/Ressourcenprüfung und expliziter Release-Freigabe aus dem öffentlichen `v2-dev` nach `v2-pub`. Jede Übernahme wird über einen konkreten Commit-SHA und die geprüften Datei-Prüfwerte dokumentiert.
 
-## Sicherheit und Veröffentlichung
+**Keine automatische Synchronisierung, kein automatischer Versionssprung und kein stiller HACS-Release.** Die Einzelheiten stehen in [PUBLIC_RELEASE_POLICY.md](docs/PUBLIC_RELEASE_POLICY.md).
 
-[PUBLIC_DEVELOPMENT_POLICY.md](docs/PUBLIC_DEVELOPMENT_POLICY.md) regelt die Veröffentlichung. Keine Tokens, Geheimnisse, Hostnamen privater Systeme, IP-Adressen, personenbezogene Diagnosen, Home-Assistant-Konfiguration, Sicherungen oder Inhalte privater Erweiterungen in diesem Repository oder seinen Actions-Protokollen.
-
-Der Projektcode unterliegt **GPL-3.0-only**; offizielle Projektlogos und Namensrechte sind gemäß [BRANDING.md](BRANDING.md) gesondert geschützt. Siehe auch [COPYRIGHT.md](COPYRIGHT.md), [AUTHORS.md](AUTHORS.md) und [THIRD_PARTY.md](THIRD_PARTY.md).
-
-## Automatische Prüfungen
-
-Die öffentlichen Standard-GitHub-Runner prüfen vorerst Quellintegrität, Syntax, Lizenz-/Paketgrenzen und wichtige Sicherheitsverträge. **Kein automatischer Artefaktupload**, um den bestehenden GitHub-Artefaktspeicher nicht zusätzlich zu belasten.
-
-Automatische Prüfungen ersetzen keine reale Home-Assistant-Abnahme. CI-Ergebnisse und Versionskennungen dürfen nicht als V2-Freigabe verstanden werden.
+Die Software steht unter GPL-3.0-only; für offizielle Logos und Marken gelten [BRANDING.md](BRANDING.md) und [COPYRIGHT.md](COPYRIGHT.md).
 
 **C.K. – Eine Idee weiter gedacht.**

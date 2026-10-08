@@ -1,13 +1,9 @@
-# Beiträge zu Deploy Relay Agent V2
+# Mitarbeit und Veröffentlichung
 
-Dieses Repository ist die öffentliche Entwicklungsquelle. Der aktuelle Quellcode ist eine unveränderte, bereits veröffentlichte V1-Ausgangsbasis; V2 ist noch nicht freigegeben.
+**Neue Funktionen und Fehlerkorrekturen gehören in [deploy-relay-agent-v2-dev](https://github.com/TheDaimos/deploy-relay-agent-v2-dev)**, nicht in dieses Repository.
 
-Vor größeren Änderungen Architektur, Sicherheit und Abnahmekriterien dokumentieren. Kleine, überprüfbare Änderungen bevorzugen. Alle bestehenden Sperren und Schutzregeln erhalten: LOCKED, expliziter DEVELOPMENT-Modus, eingefrorener Commit, schreibgeschützte Vorschau, Sicherung vor Mutation, Verifikation und sichere Wiederherstellung.
+Dieses öffentliche Repository ist ausschließlich für geprüfte V2-Veröffentlichungen reserviert. Übertragungen aus dem Entwicklungsrepository benötigen eine dokumentierte Freigabe, den genauen Quellcommit, geprüfte Dateiinhalte und die vollständig bestandenen technischen und realen Home-Assistant-Tests.
 
-Zu geänderten Funktionen gehören automatische Tests und – wo sinnvoll – reale Home-Assistant-Tests.
+Der aktuelle öffentliche V1-Quellstand ist nur Ausgangsmaterial; eine V2-Freigabe liegt nicht vor. Keine Zugangsdaten, privaten Entwicklungsdokumente, Diagnoseexporte oder privaten Git-Historien in diesen Veröffentlichungskanal einbringen.
 
-Niemals Tokens, reale Diagnoseberichte, Daten privater Systeme, Sicherungen, private Erweiterungen oder private Git-Historie veröffentlichen.
-
-Die öffentlichen Prüfungen erhalten nur Leserechte und laden keine Testartefakte hoch. Eine getrennte Veröffentlichung erfolgt erst nach V2-Realabnahme.
-
-Weitere Regeln: docs/PUBLIC_DEVELOPMENT_POLICY.md.
+Siehe [Freigaberichtlinie](docs/PUBLIC_RELEASE_POLICY.md).
